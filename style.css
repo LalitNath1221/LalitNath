@@ -1,25 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-:root{
+/*:root{
     --font : 'Ubuntu', sans-serif;
     --primary-color: rgb(60 24 255 );
     --fill : 4.72;
     --light: white;
+}*/
+.mode-light{
+    --font : 'Ubuntu', sans-serif;
+    --primary-color: #ffffff;
+    --secondry-color: #3B2C85;
+    --primary-font: #2C2828;
+    --secondry-font: #ffffff;
+    --text-color: #2C2828;
+    --fill : 4.72;
+    --light: white;
 }
-/*:root{
+.mode-dark{
     --font : 'Ubuntu', sans-serif;
     --primary-color: #2C2828;
     --secondry-color: #3B2C85;
+    --primary-font: #ffffff;
+    --secondry-font: #2C2828;
     --text-color: #ffffff;
     --fill : 4.72;
     --light: white;
-}*/
+}
 *{
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
 }
+body{
+    background-color: var(--primary-color);
+}
+/*common classes*/
+.red{
+    color: red;
+}
+.blue{
+    color: #3b1ae2;
+}
+/*common classes end*/
+
 #self-intro{
     position: relative;
     width: 100%;
@@ -30,8 +54,37 @@
     background-color: var(--primary-color);
 }
 #self-intro div{
-    width: 100%;
+    width: 50%;
     height: 100%;
+}
+#self-intro .intro{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#self-intro .intro .intro-content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#self-intro .intro .intro-content p{
+    display: block;
+    color: var(--primary-font);
+    font-family: var(--font);
+    font-size: 3rem;
+}
+#self-intro .intro .intro-content .description{
+    font-size: 16px;
+}
+#self-intro .illustration{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+#self-intro .illustration img{
+    width: 13rem;
+    overflow: hidden;
 }
 #self-intro::after{
     content: "";
@@ -56,18 +109,7 @@
     }
     
 }
-.intro-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: var(--light);
-    font-family: var(--font);
-}
-.intro-text p{
-    font-size: 5rem;
-    font-weight: 800;
-}
+
 #scroll-indecator{
     font-size: 20px;
     opacity: .5;
@@ -75,7 +117,7 @@
 #skills-container{
     position: relative;
     width: 100%;
-    background-color: #e3edf7;
+    background-color: var(--primary-color);
     padding-block: 3rem;
     min-height: 100vh;
 }
@@ -86,6 +128,7 @@
     font-weight: 800;
     position: relative;
     padding: 5px;
+    color: var(--primary-font);
 }
 .text-white{
     color: white;
@@ -101,19 +144,29 @@
 }
 .skills{
     width: 80%;
+    min-height: 70vh;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     margin-inline: auto;
     padding-block: 3rem;
 }
+
 .skill{
-    width: 160px;
-    height: 200px;
-    position: relative;
-    margin: 2rem;
+    width: 80%;
+    margin-bottom: 2rem;
+    font-family: var(--font);
+    color: var(--primary-font);
 }
+.skill-set{
+    font-family: var(--font);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+/*animated circle start*/
 .outer-circle{
     width: 160px;
     aspect-ratio: 1/1;
@@ -147,6 +200,7 @@ circle{
 .circle-animate{
     animation: fill-anim 2s ease-in-out .2s forwards;
 }
+
 svg{
     position: absolute;
     top: 0px;
@@ -160,24 +214,14 @@ svg{
         stroke-dashoffset: var(--value);
     }
 }
-.skill-text{
-    font-family: var(--font);
-    font-size: 1.5rem;
-    text-align: center;
-}
-.skill-name{
-    font-family: var(--font);
-    font-size: 22px;
-    font-weight: 500;
-    text-align: center;
-    padding-top: 10px;
-}
+/*animated circle end*/
 
-#qualification-container{
+
+#qualification-container, #experience-container{
     width: 100%;
     min-height: 100vh;
     background-color: var(--primary-color);
-    padding-block: 3rem;
+    padding-block: 3.2rem;
 }
 
 .underline-animation{
@@ -209,9 +253,9 @@ svg{
     display: grid;
     grid-template-columns: 1fr 3fr;
     width: 70%;
-    height: 160px;
+    height: 170px;
     margin: 2rem 0;
-    padding: 10px;
+    padding: 15px;
     background-color: var(--light);
     border-radius: .5rem;
 }
@@ -322,6 +366,40 @@ svg{
 }
 .projects .project .text .btn:hover{
     transform: scale3d(1.1, 1.1, 1.1);
+}
+/*EXPERIENCE*/
+.experiences{
+    width: 60%;
+    margin-inline: auto;
+    margin-top: 2rem;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.experience{
+    width: 80%;
+    margin-inline: auto;
+    margin-top: 2rem;
+    color: var(--primary-font);
+    font-family: var(--font);
+}
+.experience .heading{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.experience i{
+    margin-right: 10px;
+    color: var(--secondry-color);
+}
+.experience .details{
+    font-size: 16px;
+    padding-left: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
 
@@ -460,3 +538,47 @@ nav{
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
+
+/*SOCIAL MEDIA*/
+.social-container {
+    position: fixed;
+    top: 30%;
+    left: 15px;
+  }
+  
+  .social-container .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-block: 10px;
+    outline: none;
+    border: none;
+    background: #d6d6d6;
+    box-shadow: 5px 5px 10px -1px #b6a9a9;
+    border-radius: 50%;
+    transition: 0.2;
+  }
+  .social-container .btn i{
+    font-size: 26px;
+    color: var(--secondry-font);
+  }
+  
+  .social-container .btn:hover {
+    cursor: pointer;
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.21);
+    }
+    to {
+      transform: scale(1);
+    }
+  }

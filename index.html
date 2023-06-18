@@ -6,413 +6,366 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   </head>
-  <body>
+  <body class="mode-dark">
     <nav>
       <div id="hamburger-btn" class="hamburger" onclick="actionA()">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
       <ul id="container-nav-links" class="nav-links">
-          <li class="nav-items"><a href="#self-intro">Home</a></li>
-          <li class="nav-items"><a href="#skills-container">skills</a></li>
-          <li class="nav-items"><a href="#qualification-container">Qualifications</a></li>
-          <li class="nav-items"><a href="#projects-container">projects</a></li>
-          <li class="nav-items"><a href="#">Contact me</a></li>
+        <li class="nav-items"><a href="#self-intro">Home</a></li>
+        <li class="nav-items"><a href="#skills-container">skills</a></li>
+        <li class="nav-items">
+          <a href="#qualification-container">Qualifications</a>
+        </li>
+        <li class="nav-items"><a href="#projects-container">projects</a></li>
+        <li class="nav-items"><a href="#">Contact me</a></li>
       </ul>
-  </nav>
+    </nav>
     <div id="main-container">
       <div id="self-intro">
-        
+        <!--
         <div class="intro-text wrapper">
           <p id="hello-text"><span></span></p>
           <p id="name-text"><span></span></p>
         </div>
-        <!--
-        <div class="intro">
-          <p>Hello!</p>
-          <p>I am Lalit Nath</p>
-          <p>Computer Science Engineering Student</p>
-        </div>
-        <div class="illust"></div>
         -->
+        <div class="intro">
+          <div class="intro-content">
+            <p class="intro-text">Hello!</p>
+            <p class="intro-text">I am Lalit Nath</p>
+            <p class="intro-text description">
+              Computer Science Engineering Student
+            </p>
+          </div>
+        </div>
+        <div class="illustration">
+          <img class="illustration-img" src="./media/man1.png" alt="" />
+        </div>
       </div>
       <div id="skills-container">
-        <p class="container-heading text-primary">My Skills
-        </p>
+        <p class="container-heading">My Skills</p>
         <div class="skills">
-          <div class="skill">
-            <div class="outer-circle">
-              <div class="inner-circle">
-                <p class="skill-text">65%</p>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                width="160px"
-                height="160px"
+          <div class="skill development">
+            <p class="skill-set">
+              <span class="blue">Web Development</span>
+              &NonBreakingSpace;=&NonBreakingSpace;<span class="red"
+                >&lbrace;</span
               >
-                <defs>
-                  <linearGradient id="GradientColor">
-                    <stop offset="0%" stop-color="#e91e63" />
-                    <stop offset="100%" stop-color="#673ab7" />
-                  </linearGradient>
-                </defs>
-                <circle cx="80" cy="80" r="70" stroke-linecap="round"  style="--value:154" />
-              </svg>
-            </div>
-
-            <p class="skill-name">C/C++</p>
+              HTML, CSS, JS, Bootstrap, GSAP, React.js, Django, MERN
+              <span class="red">&rbrace;</span>
+            </p>
           </div>
-          <div class="skill">
-            <div class="outer-circle">
-              <div class="inner-circle">
-                <p class="skill-text">60%</p>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                width="160px"
-                height="160px"
+          <div class="skill programming">
+            <p class="skill-set">
+              <span class="blue">Programming Langauges</span
+              >&NonBreakingSpace;=&NonBreakingSpace;<span class="red"
+                >&lbrace;</span
               >
-                <defs>
-                  <linearGradient id="GradientColor">
-                    <stop offset="0%" stop-color="#e91e63" />
-                    <stop offset="100%" stop-color="#673ab7" />
-                  </linearGradient>
-                </defs>
-                <circle cx="80" cy="80" r="70" stroke-linecap="round" style="--value:176"/>
-              </svg>
-            </div>
-
-            <p class="skill-name">Python</p>
+              C/C++, Java, Python <span class="red">&rbrace;</span>
+            </p>
           </div>
-          <div class="skill">
-            <div class="outer-circle">
-              <div class="inner-circle">
-                <p class="skill-text">50%</p>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                width="160px"
-                height="160px"
-              >
-                <defs>
-                  <linearGradient id="GradientColor">
-                    <stop offset="0%" stop-color="#e91e63" />
-                    <stop offset="100%" stop-color="#673ab7" />
-                  </linearGradient>
-                </defs>
-                <circle cx="80" cy="80" r="70" stroke-linecap="round" style="--value:154"/>
-              </svg>
-            </div>
 
-            <p class="skill-name">Java</p>
+          <div class="skill databases">
+            <p class="skill-set">
+              <span class="blue">Databases</span
+              >&NonBreakingSpace;=&NonBreakingSpace;<span class="red"
+                >&lbrace;</span
+              >
+              Mysql, MongoDB <span class="red">&rbrace;</span>
+            </p>
           </div>
-          <div class="skill">
-            <div class="outer-circle">
-              <div class="inner-circle">
-                <p class="skill-text">60%</p>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                width="160px"
-                height="160px"
+          <div class="skill others">
+            <p class="skill-set">
+              <span class="blue">Others</span
+              >&NonBreakingSpace;=&NonBreakingSpace;<span class="red"
+                >&lbrace;</span
               >
-                <defs>
-                  <linearGradient id="GradientColor">
-                    <stop offset="0%" stop-color="#e91e63" />
-                    <stop offset="100%" stop-color="#673ab7" />
-                  </linearGradient>
-                </defs>
-                <circle cx="80" cy="80" r="70" stroke-linecap="round" style="--value:176"/>
-              </svg>
-            </div>
-
-            <p class="skill-name">Django</p>
-          </div>
-          <div class="skill">
-            <div class="outer-circle">
-              <div class="inner-circle">
-                <p class="skill-text">80%</p>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                width="160px"
-                height="160px"
-              >
-                <defs>
-                  <linearGradient id="GradientColor">
-                    <stop offset="0%" stop-color="#e91e63" />
-                    <stop offset="100%" stop-color="#673ab7" />
-                  </linearGradient>
-                </defs>
-                <circle cx="80" cy="80" r="70" stroke-linecap="round" style="--value:88"/>
-              </svg>
-            </div>
-
-            <p class="skill-name">HTML</p>
-          </div>
-          <div class="skill">
-            <div class="outer-circle">
-              <div class="inner-circle">
-                <p class="skill-text">70%</p>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                width="160px"
-                height="160px"
-              >
-                <defs>
-                  <linearGradient id="GradientColor">
-                    <stop offset="0%" stop-color="#e91e63" />
-                    <stop offset="100%" stop-color="#673ab7" />
-                  </linearGradient>
-                </defs>
-                <circle cx="80" cy="80" r="70" stroke-linecap="round" style="--value:132"/>
-              </svg>
-            </div>
-
-            <p class="skill-name">CSS</p>
-          </div>
-          <div class="skill">
-            <div class="outer-circle">
-              <div class="inner-circle">
-                <p class="skill-text">65%</p>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                width="160px"
-                height="160px"
-              >
-                <defs>
-                  <linearGradient id="GradientColor">
-                    <stop offset="0%" stop-color="#e91e63" />
-                    <stop offset="100%" stop-color="#673ab7" />
-                  </linearGradient>
-                </defs>
-                <circle cx="80" cy="80" r="70" stroke-linecap="round" style="--value:154"/>
-              </svg>
-            </div>
-
-            <p class="skill-name">JavaScript</p>
-          </div>
-          <div class="skill">
-            <div class="outer-circle">
-              <div class="inner-circle">
-                <p class="skill-text">60%</p>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                width="160px"
-                height="160px"
-              >
-                <defs>
-                  <linearGradient id="GradientColor">
-                    <stop offset="0%" stop-color="#e91e63" />
-                    <stop offset="100%" stop-color="#673ab7" />
-                  </linearGradient>
-                </defs>
-                <circle cx="80" cy="80" r="70" stroke-linecap="round" style="--value:176"/>
-              </svg>
-            </div>
-
-            <p class="skill-name">React.js</p>
-          </div>
-          <div class="skill">
-            <div class="outer-circle">
-              <div class="inner-circle">
-                <p class="skill-text">70%</p>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                width="160px"
-                height="160px"
-              >
-                <defs>
-                  <linearGradient id="GradientColor">
-                    <stop offset="0%" stop-color="#e91e63" />
-                    <stop offset="100%" stop-color="#673ab7" />
-                  </linearGradient>
-                </defs>
-                <circle cx="80" cy="80" r="70" stroke-linecap="round" style="--value:132"/>
-              </svg>
-            </div>
-
-            <p class="skill-name">Bootstrap</p>
+              Ms Office, Ms Word, Ms Excel <span class="red">&rbrace;</span>
+            </p>
           </div>
         </div>
       </div>
       <div id="qualification-container">
-        <header style="display: flex; justify-content: center;">
-        <p class="container-heading text-white">Qualifications
-          <span class="underline-animation box-white"></span>
-        </p>
-      </header>
-      <div class="qualifications">
-        <ul id="qualification-list">
-          <li class="item">
-            <div class="logo">
-              <img src="./media/school.png" alt="">
-            </div>
-            <div class="content">
-              <p class="institution-name">Govt. Boys Sr. Sec. School, c4e janakpuri, new delhi </p>
-              <p class="cource-detail">12th</p>
-              <p class="duration">2017-2019</p>
-              <p class="percentage">71%</p>
-            </div>
-            <span class="connecting-line"></span>
-          </li>
-          <li class="item">
-            <div class="logo">
-              <img src="./media/diploma.png" alt="">
-            </div>
-            <div class="content">
-              <p class="institution-name">Guru Tegh Bahadur Polytechnic institute, Rajouri Garden, New Delhi</p>
-              <p class="cource-detail">Diploma (Computer Science & engineering)</p>
-              <p class="duration">2019-2021</p>
-              <p class="percentage">82%</p>
-            </div>
-            <span class="connecting-line"></span>
-          </li>
-          <li class="item">
-            <div class="logo">
-              <img src="./media/degree.png" alt="">
-            </div>
-            <div class="content">
-              <p class="institution-name">Bipin Tripathi kumaon institute of technology, almora, Uttarakhand</p>
-              <p class="cource-detail">B.Tech (Computer Science & engineering)</p>
-              <p class="duration">2021-2024</p>
-              <p class="percentage">appearing</p>
-            </div>
-            <span class="connecting-line"></span>
-          </li>
-          <span class="connecting-line-vertical"></span>
-        </ul>
-      </div>
+        <header style="display: flex; justify-content: center">
+          <p class="container-heading text-white">
+            Qualifications
+            <span class="underline-animation box-white"></span>
+          </p>
+        </header>
+        <div class="qualifications">
+          <ul id="qualification-list">
+            <li class="item">
+              <div class="logo">
+                <img src="./media/school.png" alt="" />
+              </div>
+              <div class="content">
+                <p class="institution-name">
+                  Govt. Boys Sr. Sec. School, c4e janakpuri, new delhi
+                </p>
+                <p class="cource-detail">12th</p>
+                <p class="duration">2017-2019</p>
+                <p class="percentage">71%</p>
+              </div>
+              <span class="connecting-line"></span>
+            </li>
+            <li class="item">
+              <div class="logo">
+                <img src="./media/diploma.png" alt="" />
+              </div>
+              <div class="content">
+                <p class="institution-name">
+                  Guru Tegh Bahadur Polytechnic institute, Rajouri Garden, New
+                  Delhi
+                </p>
+                <p class="cource-detail">
+                  Diploma (Computer Science & engineering)
+                </p>
+                <p class="duration">2019-2021</p>
+                <p class="percentage">82%</p>
+              </div>
+              <span class="connecting-line"></span>
+            </li>
+            <li class="item">
+              <div class="logo">
+                <img src="./media/degree.png" alt="" />
+              </div>
+              <div class="content">
+                <p class="institution-name">
+                  Bipin Tripathi kumaon institute of technology, almora,
+                  Uttarakhand
+                </p>
+                <p class="cource-detail">
+                  B.Tech (Computer Science & engineering)
+                </p>
+                <p class="duration">2021-2024</p>
+                <p class="percentage">appearing</p>
+              </div>
+              <span class="connecting-line"></span>
+            </li>
+            <span class="connecting-line-vertical"></span>
+          </ul>
+        </div>
       </div>
       <div id="projects-container">
-        <header style="display: flex; justify-content: center;">
-          <p id="projects-container-heading" class="container-heading text-primary">Projects
+        <header style="display: flex; justify-content: center">
+          <p id="projects-container-heading" class="container-heading">
+            Projects
           </p>
         </header>
         <div class="projects">
           <div class="project">
             <div class="img">
-              <img src="./media/interiorDesign.png" alt="">
+              <img src="./media/interiorDesign.png" alt="" />
             </div>
-            <span class="text"><a target="_blank" href="https://tinyurl.com/3n5mdrd8" class="btn text-primary">Live demo</a></span>
+            <span class="text"
+              ><a
+                target="_blank"
+                href="https://tinyurl.com/3n5mdrd8"
+                class="btn text-primary"
+                >Live demo</a
+              ></span
+            >
           </div>
           <div class="project">
             <div class="img">
-              <img src="./media/urlbot.png" alt="">
+              <img src="./media/urlbot.png" alt="" />
             </div>
-            <span class="text"><a target="_blank" href="https://tinyurl.com/8wutwrjf" class="btn text-primary">Live demo</a></span>
+            <span class="text"
+              ><a
+                target="_blank"
+                href="https://tinyurl.com/8wutwrjf"
+                class="btn text-primary"
+                >Live demo</a
+              ></span
+            >
           </div>
           <div class="project">
             <div class="img">
-              <img src="./media/webDevCompanyDesign2.png" alt="">
+              <img src="./media/webDevCompanyDesign2.png" alt="" />
             </div>
-            <span class="text"><a target="_blank" href="https://tinyurl.com/2wcr7vfk" class="btn text-primary">Live demo</a></span>
+            <span class="text"
+              ><a
+                target="_blank"
+                href="https://tinyurl.com/2wcr7vfk"
+                class="btn text-primary"
+                >Live demo</a
+              ></span
+            >
           </div>
         </div>
       </div>
+      <div id="experience-container">
+        <header style="display: flex; justify-content: center">
+          <p id="experience-container-heading" class="container-heading">
+            Experiencs
+          </p>
+        </header>
+        <div class="experiences">
+          <div class="experience">
+            <p class="heading">
+              <i class="bi bi-briefcase-fill"></i>Childo Education Research and
+              Development Foundation
+            </p>
+            <p class="details"><i class="bi bi-geo-alt-fill"></i>Virtual</p>
+            <p class="details">
+              As an intern, responsible for creating and publishing engaging and
+              informative content. Using my strong writing skills and research
+              abilities i crafted compelling articles, blog posts. I conducted
+              in-depth research, ensured accurate information, and employed
+              effective SEO strategies to optimize content visibility.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="social-container">
+      <a href="" class="btn">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="" class="btn">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="" class="btn">
+        <i class="bi bi-twitter"></i>
+      </a>
+      <a href="" class="btn">
+        <i class="bi bi-heart"></i>
+      </a>
     </div>
   </body>
   <script src="./script.js"></script>
   <script>
     gsap.registerPlugin(ScrollTrigger);
     gsap.defaults({ ease: "none" });
-    const tl = gsap.timeline({ repeat: 0, repeatDelay: 1, yoyo: false });
-    tl.to("#hello-text span", { duration: 1, text: " Hello" });
-    tl.to("#name-text span", { duration: 1, text: " I am Lalit Nath" });
-
+    const t1 = gsap.timeline({ repeat: 0, repeatDelay: 1, yoyo: false });
+    /*t1.to("#hello-text span", { duration: 1, text: " Hello" });
+    t1.to("#name-text span", { duration: 1, text: " I am Lalit Nath" });
+*/
+    t1.from(".intro-text", {
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.6,
+      x: "-200px",
+    });
+    gsap.from(".illustration-img", { opacity: 0, duration: 0.8, x: "200px" });
     let skilltext = document.getElementsByClassName("skill-text");
     for (let i = 0; i < skilltext.length; i++) {
       const value = skilltext[i].innerHTML;
-      let count =0;
+      let count = 0;
       setInterval(() => {
-        if (count==parseInt(value)+1) {
+        if (count == parseInt(value) + 1) {
           clearInterval();
-        } else{
-          skilltext[i].innerHTML = count + '%';
-          count = count+1;
+        } else {
+          skilltext[i].innerHTML = count + "%";
+          count = count + 1;
         }
       }, 20);
-      
     }
     let circle = document.getElementsByTagName("circle");
-    gsap.from('.skill', {scrollTrigger:{
-      trigger: "#skills-container",
-      toggleActions: "play none none reset",
-      onEnter: ()=>{
-        for (let index = 0; index < circle.length; index++) {
-          circle[index].classList.add("circle-animate");
-          
-        }
+    gsap.from(".skill", {
+      scrollTrigger: {
+        trigger: "#skills-container",
+        toggleActions: "play none none reset",
+        onEnter: () => {
+          for (let index = 0; index < circle.length; index++) {
+            circle[index].classList.add("circle-animate");
+          }
+        },
+        onLeaveBack: () => {
+          for (let index = 0; index < circle.length; index++) {
+            circle[index].classList.remove("circle-animate");
+          }
+        },
       },
-      onLeaveBack: ()=>{
-        for (let index = 0; index < circle.length; index++) {
-          circle[index].classList.remove("circle-animate");
-          
-        }
-      }
-    },opacity: 0, duration: .8, stagger: 0.3, y: '100px'})
-    gsap.to('.underline-animation', {scrollTrigger:{
-      trigger: "#qualification-container",
-      toggleActions: "play none none reset",
-    },width: '100%', duration: .8});
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.3,
+      y: "100px",
+    });
+    gsap.to(".underline-animation", {
+      scrollTrigger: {
+        trigger: "#qualification-container",
+        toggleActions: "play none none reset",
+      },
+      width: "100%",
+      duration: 0.8,
+    });
 
-    gsap.from('.connecting-line-vertical', {scrollTrigger:{
-      trigger: "#qualification-list",
-      toggleActions: "play none none reset",
-    },height: '0%', duration: 4});
+    gsap.from(".connecting-line-vertical", {
+      scrollTrigger: {
+        trigger: "#qualification-list",
+        toggleActions: "play none none reset",
+      },
+      height: "0%",
+      duration: 4,
+    });
 
-    gsap.from('.item', {scrollTrigger:{
-      trigger: "#qualification-list",
-      toggleActions: "play none none reset",
-    },opacity: 0, duration: .8, stagger: 0.3, x: '100px'});
+    gsap.from(".item", {
+      scrollTrigger: {
+        trigger: "#qualification-list",
+        toggleActions: "play none none reset",
+      },
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.3,
+      x: "100px",
+    });
 
-    gsap.from('.connecting-line', {scrollTrigger:{
-      trigger: "#qualification-list",
-      toggleActions: "play none none reset",
-    },width: '0%', stagger: .8, duration: 1.5});
+    gsap.from(".connecting-line", {
+      scrollTrigger: {
+        trigger: "#qualification-list",
+        toggleActions: "play none none reset",
+      },
+      width: "0%",
+      stagger: 0.8,
+      duration: 1.5,
+    });
 
-    gsap.from('#projects-container-heading', {scrollTrigger:{
-      trigger: "#projects-container-heading",
-      toggleActions: "play none none reset",
-    },opacity: 0, duration: .8, y: '100px'});
+    gsap.from("#projects-container-heading", {
+      scrollTrigger: {
+        trigger: "#projects-container-heading",
+        toggleActions: "play none none reset",
+      },
+      opacity: 0,
+      duration: 0.8,
+      y: "100px",
+    });
 
-    gsap.from('.project', {scrollTrigger:{
-      trigger: ".projects",
-      toggleActions: "play none none reset",
-    },opacity: 0, stagger:.3, duration: 1, y: '200px'});
-    
+    gsap.from(".project", {
+      scrollTrigger: {
+        trigger: ".projects",
+        toggleActions: "play none none reset",
+      },
+      opacity: 0,
+      stagger: 0.3,
+      duration: 1,
+      y: "200px",
+    });
+
     let hamburger = document.getElementsByClassName("hamburger");
-let navLinks = document.getElementsByClassName("nav-links");
-let links = document.getElementsByClassName("nav-items");
+    let navLinks = document.getElementsByClassName("nav-links");
+    let links = document.getElementsByClassName("nav-items");
 
-function actionA(){
-    //Animate Links
-     navLinks[0].classList.toggle("open");
-     for(let i=0; i<links.length; i++){
-         links[i].classList.toggle("fade");
-     }
- 
-     //Hamburger Animation
-     hamburger[0].classList.toggle("toggle");
- }
+    function actionA() {
+      //Animate Links
+      navLinks[0].classList.toggle("open");
+      for (let i = 0; i < links.length; i++) {
+        links[i].classList.toggle("fade");
+      }
+
+      //Hamburger Animation
+      hamburger[0].classList.toggle("toggle");
+    }
   </script>
 </html>
 <!--to change the qualification lis item in rem-->
