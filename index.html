@@ -57,47 +57,47 @@
         <div class="skills">
           <div class="skill development">
             <p class="skill-set">
-              <span class="blue">Web Development</span>
-              &NonBreakingSpace;=&NonBreakingSpace;<span class="red"
+              <span class="variable">Web Development</span>
+              &NonBreakingSpace;=&NonBreakingSpace;<span class="curl-braces"
                 >&lbrace;</span
-              >
+              ><span class="data">
               HTML, CSS, JS, Bootstrap, GSAP, React.js, Django, MERN
-              <span class="red">&rbrace;</span>
+            </span><span class="curl-braces">&rbrace;</span>
             </p>
           </div>
           <div class="skill programming">
             <p class="skill-set">
-              <span class="blue">Programming Langauges</span
-              >&NonBreakingSpace;=&NonBreakingSpace;<span class="red"
+              <span class="variable">Programming Langauges</span
+              >&NonBreakingSpace;=&NonBreakingSpace;<span class="curl-braces"
                 >&lbrace;</span
-              >
-              C/C++, Java, Python <span class="red">&rbrace;</span>
+              ><span class="data">
+              C/C++, Java, Python </span><span class="curl-braces">&rbrace;</span>
             </p>
           </div>
 
           <div class="skill databases">
             <p class="skill-set">
-              <span class="blue">Databases</span
-              >&NonBreakingSpace;=&NonBreakingSpace;<span class="red"
+              <span class="variable">Databases</span
+              >&NonBreakingSpace;=&NonBreakingSpace;<span class="curl-braces"
                 >&lbrace;</span
-              >
-              Mysql, MongoDB <span class="red">&rbrace;</span>
+              ><span class="data">
+              Mysql, MongoDB </span><span class="curl-braces">&rbrace;</span>
             </p>
           </div>
           <div class="skill others">
             <p class="skill-set">
-              <span class="blue">Others</span
-              >&NonBreakingSpace;=&NonBreakingSpace;<span class="red"
-                >&lbrace;</span
-              >
-              Ms Office, Ms Word, Ms Excel <span class="red">&rbrace;</span>
+              <span class="variable">Others</span
+              >&NonBreakingSpace;=&NonBreakingSpace;<span class="curl-braces"
+                >&lbrace;</span>
+                <span class="data">
+              Ms Office, Ms Word, Ms Excel </span><span class="curl-braces">&rbrace;</span>
             </p>
           </div>
         </div>
       </div>
       <div id="qualification-container">
         <header style="display: flex; justify-content: center">
-          <p class="container-heading text-white">
+          <p class="container-heading">
             Qualifications
             <span class="underline-animation box-white"></span>
           </p>
@@ -208,6 +208,7 @@
         <header style="display: flex; justify-content: center">
           <p id="experience-container-heading" class="container-heading">
             Experiencs
+            <span class="experience-underline-animation underline-animation box-white"></span>
           </p>
         </header>
         <div class="experiences">
@@ -227,20 +228,55 @@
           </div>
         </div>
       </div>
+      <div id="contact-container">
+        <header style="display: flex; justify-content: center">
+          <p id="contact-container-heading" class="container-heading">
+            Contact Me
+            <span class="contact-underline-animation underline-animation box-white"></span>
+          </p>
+        </header>
+        <div class="contact-details">
+          <p>Get in touch here</p>
+          <div class="scoial-media">
+            <div class="social-container">
+              <a href="" class="btn">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="" class="btn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="" class="btn">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="" class="btn">
+                <i class="bi bi-facebook"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="social-container">
-      <a href="" class="btn">
-        <i class="bi bi-facebook"></i>
-      </a>
+    <div id="sticky-social-container" class="social-container">
       <a href="" class="btn">
         <i class="bi bi-instagram"></i>
       </a>
       <a href="" class="btn">
-        <i class="bi bi-twitter"></i>
+        <i class="bi bi-linkedin"></i>
       </a>
       <a href="" class="btn">
-        <i class="bi bi-heart"></i>
+        <i class="bi bi-github"></i>
       </a>
+      <a href="" class="btn">
+        <i class="bi bi-facebook"></i>
+      </a>
+    </div>
+    <div id="sticky-mode-container">
+      <input type="checkbox" class="checkbox" id="checkbox">
+      <label for="checkbox" class="checkbox-label">
+        <i class="bi bi-moon-stars-fill fa-moon"></i>
+        <i class="bi bi-brightness-high-fill fa-sun"></i>
+        <span class="ball"></span>
+      </label>
     </div>
   </body>
   <script src="./script.js"></script>
@@ -350,6 +386,52 @@
       stagger: 0.3,
       duration: 1,
       y: "200px",
+    });
+
+    gsap.from(".experience", {
+      scrollTrigger: {
+        trigger: ".experiences",
+        toggleActions: "play none none reset",
+      },
+      opacity: 0,
+      duration: 1,
+      x: "200px",
+    });
+    gsap.to(".experience-underline-animation", {
+      scrollTrigger: {
+        trigger: "#experience-container-heading",
+        toggleActions: "play none none reset",
+      },
+      width: "100%",
+      duration: 0.8,
+    });
+    gsap.to(".contact-underline-animation", {
+      scrollTrigger: {
+        trigger: "#contact-container-heading",
+        toggleActions: "play none none reset",
+      },
+      width: "100%",
+      duration: 0.8,
+    });
+    gsap.from(".scoial-media", {
+      scrollTrigger: {
+        trigger: ".contact-details",
+        toggleActions: "play none none reset",
+      },
+      duration: 0.8,
+      y: "50px",
+      opacity: 0
+    });
+
+    gsap.to("#sticky-social-container", {
+      scrollTrigger: {
+        trigger: "#contact-container-heading",
+        toggleActions: "play none none reset",
+        scrub: true,
+      },
+      duration: 0.8,
+      x: "-100px",
+      opacity: 0
     });
 
     let hamburger = document.getElementsByClassName("hamburger");
