@@ -58,7 +58,9 @@ body{
     color: #017201;
 }
 /*common classes end*/
-
+#main-container{
+    overflow-x: hidden;
+}
 #self-intro{
     position: relative;
     width: 100%;
@@ -498,7 +500,7 @@ nav{
 .hamburger div{
     width: 30px;
     height:3px;
-    background: var(--light);
+    background: var(--secondry-color);
     margin: 5px;
     transition: all 0.3s ease;
 }
