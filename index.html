@@ -29,7 +29,7 @@
           <a href="#qualification-container">Qualifications</a>
         </li>
         <li class="nav-items"><a href="#projects-container">projects</a></li>
-        <li class="nav-items"><a href="#">Contact me</a></li>
+        <li class="nav-items"><a href="#contact-container">Contact me</a></li>
       </ul>
     </nav>
     <div id="main-container">
@@ -432,7 +432,7 @@
     let hamburger = document.getElementsByClassName("hamburger");
     let navLinks = document.getElementsByClassName("nav-links");
     let links = document.getElementsByClassName("nav-items");
-
+    
     function actionA() {
       //Animate Links
       navLinks[0].classList.toggle("open");
@@ -442,7 +442,11 @@
 
       //Hamburger Animation
       hamburger[0].classList.toggle("toggle");
+      
     }
+    for (let i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", actionA);
+      }
   </script>
 </html>
 <!--to change the qualification lis item in rem-->
