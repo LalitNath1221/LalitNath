@@ -392,6 +392,7 @@ svg{
     margin-top: 2rem;
     min-height: 70vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -473,7 +474,8 @@ nav{
 .nav-links li a{
     color: var(--primary-font);
     font-family: var(--font);
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 18px;
     text-decoration: none;
 }
 .nav-links li a:hover {
@@ -608,6 +610,7 @@ nav{
   .social-container .btn i{
     font-size: 26px;
     color: var(--primary-color);
+    line-height: 0;
   }
   
   .social-container .btn:hover {

@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   </head>
-  <body class="mode-dark">
+  <body class="mode-light">
     <nav>
       <div id="hamburger-btn" class="hamburger" onclick="actionA()">
         <div class="line1"></div>
@@ -25,6 +25,9 @@
       <ul id="container-nav-links" class="nav-links">
         <li class="nav-items"><a href="#self-intro">Home</a></li>
         <li class="nav-items"><a href="#skills-container">skills</a></li>
+        <li class="nav-items">
+          <a href="#experience-container">Experiencs</a>
+        </li>
         <li class="nav-items">
           <a href="#qualification-container">Qualifications</a>
         </li>
@@ -56,7 +59,7 @@
               &NonBreakingSpace;=&NonBreakingSpace;<span class="curl-braces"
                 >&lbrace;</span
               ><span class="data">
-              HTML, CSS, JS, Bootstrap, GSAP, React.js, Django, MERN
+              HTML, CSS, JS, Bootstrap, Tailwind CSS, GSAP, React.js, Django, MERN
             </span><span class="curl-braces">&rbrace;</span>
             </p>
           </div>
@@ -86,6 +89,42 @@
                 >&lbrace;</span>
                 <span class="data">
               Ms Office, Ms Word, Ms Excel </span><span class="curl-braces">&rbrace;</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="experience-container">
+        <header style="display: flex; justify-content: center">
+          <p id="experience-container-heading" class="container-heading">
+            Experiencs
+            <span class="experience-underline-animation underline-animation box-white"></span>
+          </p>
+        </header>
+        <div class="experiences">
+          <div class="experience">
+            <p class="heading">
+              <i class="bi bi-briefcase-fill"></i>DigiSwarn
+            </p>
+            <div >
+              <p class="details"><i class="bi bi-geo-alt-fill"></i>Dehradun, Uttarakhand, India (Remote)</p>
+              <p class="details"><i class="bi bi-calendar-week-fill"></i>Jan 2024 - Present</p>
+            </div>
+            <p class="details">
+              As a web development intern, I'm currently leading various projects, collaborating with the team to implement innovative features and create responsive interfaces for seamless user experiences. I actively participate in code reviews, proactively resolving technical issues to ensure platform stability. Additionally, I conduct thorough testing and optimization to enhance performance and user satisfaction. In my current role, I work with technologies such as the MERN stack, Tailwind CSS, Firebase, Vercel, and others, gaining valuable hands-on experience in these tools and frameworks.
+            </p>
+          </div>
+          <div class="experience">
+            <p class="heading">
+              <i class="bi bi-briefcase-fill"></i>Childo Education Research and
+              Development Foundation
+            </p>
+            <p class="details"><i class="bi bi-geo-alt-fill"></i>Virtual</p>
+            <p class="details">
+              As an intern, responsible for creating and publishing engaging and
+              informative content. Using my strong writing skills and research
+              abilities i crafted compelling articles, blog posts. I conducted
+              in-depth research, ensured accurate information, and employed
+              effective SEO strategies to optimize content visibility.
             </p>
           </div>
         </div>
@@ -151,6 +190,7 @@
           </ul>
         </div>
       </div>
+      
       <div id="projects-container">
         <header style="display: flex; justify-content: center">
           <p id="projects-container-heading" class="container-heading">
@@ -199,30 +239,6 @@
           </div>
         </div>
       </div>
-      <div id="experience-container">
-        <header style="display: flex; justify-content: center">
-          <p id="experience-container-heading" class="container-heading">
-            Experiencs
-            <span class="experience-underline-animation underline-animation box-white"></span>
-          </p>
-        </header>
-        <div class="experiences">
-          <div class="experience">
-            <p class="heading">
-              <i class="bi bi-briefcase-fill"></i>Childo Education Research and
-              Development Foundation
-            </p>
-            <p class="details"><i class="bi bi-geo-alt-fill"></i>Virtual</p>
-            <p class="details">
-              As an intern, responsible for creating and publishing engaging and
-              informative content. Using my strong writing skills and research
-              abilities i crafted compelling articles, blog posts. I conducted
-              in-depth research, ensured accurate information, and employed
-              effective SEO strategies to optimize content visibility.
-            </p>
-          </div>
-        </div>
-      </div>
       <div id="contact-container">
         <header style="display: flex; justify-content: center">
           <p id="contact-container-heading" class="container-heading">
@@ -266,7 +282,7 @@
       </a>
     </div>
     <div id="sticky-mode-container">
-      <input type="checkbox" class="checkbox" id="checkbox">
+      <input type="checkbox" class="checkbox" id="checkbox" checked>
       <label for="checkbox" class="checkbox-label">
         <i class="bi bi-moon-stars-fill fa-moon"></i>
         <i class="bi bi-brightness-high-fill fa-sun"></i>
