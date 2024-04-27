@@ -331,19 +331,23 @@ svg{
     width: 100%;
     min-height: 100vh;
     padding-block: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .projects{
-    width: 60%;
+    width: 80%;
     margin-inline: auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-evenly;
+    grid-gap: 1rem;
     margin-top: 2rem;
 }
 .projects .project{
     position: relative;
-    width: 18rem;
+    width: 100%;
     aspect-ratio: 1/1;
-    margin: 1rem;
     border: 1px solid gray;
     background-color: var(--primary-color);
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.342);

@@ -120,6 +120,7 @@
     }
     .projects {
         width: 80% !important;
+        grid-template-columns: repeat(1, 1fr) !important;
     }
     .experiences {
         width: 100% !important;
@@ -173,7 +174,8 @@
         width: 90%;
     }
     .projects {
-        flex-wrap: wrap;
+        /*flex-wrap: wrap;*/
+        grid-template-columns: repeat(2, 1fr);
     }
     .experiences {
         width: 90%;
