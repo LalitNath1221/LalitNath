@@ -177,3 +177,40 @@ gsap.registerPlugin(ScrollTrigger);
     for (let i = 0; i < links.length; i++) {
       links[i].addEventListener("click", actionA);
       }
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Open popup
+        document.querySelectorAll(".popup-trigger").forEach(function (trigger) {
+          trigger.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.querySelector(".popup").classList.add("is-visible");
+          });
+        });
+      
+        // Close popup
+        document.querySelectorAll(".popup").forEach(function (popup) {
+          popup.addEventListener("click", function (event) {
+            if (event.target.classList.contains("popup-close") || event.target.classList.contains("popup")) {
+              event.preventDefault();
+              this.classList.remove("is-visible");
+            }
+          });
+        });
+      
+        // Close popup when clicking the ESC keyboard button
+        document.addEventListener("keyup", function (event) {
+          if (event.key === "Escape") {
+            document.querySelectorAll(".popup").forEach(function (popup) {
+              popup.classList.remove("is-visible");
+            });
+          }
+        });
+
+        setTimeout(()=>{
+          document.querySelectorAll(".popup").forEach(function (popup) {
+            popup.classList.remove("is-visible");
+          });
+        },20000)
+      });
+      
